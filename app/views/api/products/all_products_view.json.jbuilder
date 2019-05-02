@@ -1,0 +1,1 @@
+all_products_view.json.jbuilder
