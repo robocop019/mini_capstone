@@ -1,21 +1,40 @@
 class Api::ProductsController < ApplicationController
-  def all_products_action
+  def index
     @products = Product.all
-    render 'all_products_view.json.jbuilder'
+    render 'index.json.jbuilder'
   end
 
-  def godzilla_action
-    @product = Product.find(1)
-    render 'godzilla_view.json.jbuilder'
+  def create
+    @product = Product.new(
+                           name: params[:name],
+                           price: params[:price],
+                           image_url: params[:image_url],
+                           description: params[:description]
+                          )
+    @product.save
+    render 'show.json.jbuilder'
   end
 
-  def ghidorah_action
-    @product = Product.find(2)
-    render 'ghidorah_view.json.jbuilder'
+  def show
+    @product = Product.find(params[:id])
+    render 'show.json.jbuilder'
   end
 
-  def rodan_action
-    @product = Product.find(3)
-    render 'rodan_view.json.jbuilder'
+  def update
+    @product = Product.find(params[:id])
+
+    @product.name = params[:name] || @product.name
+    @product.price = params[:price] || @product.price
+    @product.image_url = params[:image_url] || @product.image_url
+    @product.description = params[:description] || @product.description
+
+    @product.save
+    render 'show.json.jbuilder'
+  end
+
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+    render json: {message: "Successfully deleted product."}
   end
 end
