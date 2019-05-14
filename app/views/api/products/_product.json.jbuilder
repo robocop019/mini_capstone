@@ -19,3 +19,4 @@ end
 json.images do
   json.array! product.images, partial: "api/images/image", as: :image
 end
+
