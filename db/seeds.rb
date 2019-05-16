@@ -7,21 +7,26 @@
 #   {url: "https://images-na.ssl-images-amazon.com/images/I/81-U6hvEPVL._SX425_.jpg", product_id: 6},
 #   {url: "https://images-na.ssl-images-amazon.com/images/I/61vEl-2s1IL._SL1102_.jpg", product_id: 7},
 #   {url: "https://i.pinimg.com/originals/3a/a6/2e/3aa62e0db3d1c63572c4947c6268f285.jpg", product_id: 8},
-#   {url: "https://www.flossiesgifts.com/v/vspfiles/photos/DIA-XPLUS-25-KINGCAESAR-2.jpg", product_id: 10}
+#   {url: "https://www.flossiesgifts.com/v/vspfiles/photos/DIA-XPLUS-25-KINGCAESAR-2.jpg", product_id: 10},
+#   {url: "https://assets1.ignimgs.com/2019/03/20/kingofmonsterssetvisit-blogroll-1553124612455_1280w.jpg", product_id: 1}
 # ])
 # Product.create!([
-#   {name: "Godzilla", price: "135.0", description: "The newly designed King of the Monsters figure for the upcoming 'Godzilla King of the Monsters'", instock: true, supplier_id: 3, image_id: nil},
-#   {name: "King Ghidorah", price: "195.0", description: "The 2019 model for Godzilla's legendary three headed dragon arch enemy.", instock: true, supplier_id: 3, image_id: nil},
-#   {name: "Rodan", price: "115.0", description: "The fire bird who can create hurricanes with his wings brought ot life with his new design for 'Godzilla King of the Monsters'", instock: true, supplier_id: 3, image_id: nil},
-#   {name: "Mothra", price: "125.0", description: "Mothra the protector of Earth in her new design for the upcoming 'Godzilla King of the Monsters'", instock: true, supplier_id: 3, image_id: nil},
-#   {name: "MechaGodzilla", price: "95.0", description: "The original alien created mech design to defeat Godzilla from 'Terror of MechaGodzilla'", instock: true, supplier_id: 1, image_id: nil},
-#   {name: "Biollante", price: "145.0", description: "Recreation of the terrifying plant monster Biollante from 'Godzilla vs Biollante'", instock: true, supplier_id: 1, image_id: nil},
-#   {name: "Destroyah", price: "135.0", description: "One of the only monsters to defeat and kill Godzilla comes to life with this figure from 'Godzilla vs Destroyah'", instock: true, supplier_id: 2, image_id: nil},
-#   {name: "SpaceGodzilla", price: "95.0", description: "The space version of the King of the Monsters from 'Godzilla vs SpaceGodzilla'", instock: true, supplier_id: 2, image_id: nil},
-#   {name: "King Caesar", price: "100.0", description: "Model for King Caesar the monster who is the master of martial arts.", instock: true, supplier_id: 1, image_id: nil}
+#   {name: "Godzilla", price: "135.0", description: "The newly designed King of the Monsters figure for the upcoming 'Godzilla King of the Monsters'", instock: true, supplier_id: 3},
+#   {name: "King Ghidorah", price: "195.0", description: "The 2019 model for Godzilla's legendary three headed dragon arch enemy.", instock: true, supplier_id: 3},
+#   {name: "Rodan", price: "115.0", description: "The fire bird who can create hurricanes with his wings brought ot life with his new design for 'Godzilla King of the Monsters'", instock: true, supplier_id: 3},
+#   {name: "Mothra", price: "125.0", description: "Mothra the protector of Earth in her new design for the upcoming 'Godzilla King of the Monsters'", instock: true, supplier_id: 3},
+#   {name: "MechaGodzilla", price: "95.0", description: "The original alien created mech design to defeat Godzilla from 'Terror of MechaGodzilla'", instock: true, supplier_id: 1},
+#   {name: "Biollante", price: "145.0", description: "Recreation of the terrifying plant monster Biollante from 'Godzilla vs Biollante'", instock: true, supplier_id: 1},
+#   {name: "Destroyah", price: "135.0", description: "One of the only monsters to defeat and kill Godzilla comes to life with this figure from 'Godzilla vs Destroyah'", instock: true, supplier_id: 2},
+#   {name: "SpaceGodzilla", price: "95.0", description: "The space version of the King of the Monsters from 'Godzilla vs SpaceGodzilla'", instock: true, supplier_id: 2},
+#   {name: "King Caesar", price: "100.0", description: "Model for King Caesar the monster who is the master of martial arts.", instock: true, supplier_id: 1}
 # ])
 # Supplier.create!([
 #   {name: "Toho", email: "tohocompany@toho.com", phone_number: "(857)-555-3847"},
 #   {name: "Monster Arts", email: "monsterarts@gmail.com", phone_number: "(458)-555-2190"},
 #   {name: "Legendary", email: "legendary@legendarypictures.com", phone_number: "(367)-555-9672"}
+# ])
+# User.create!([
+#   {name: "Dennis Reynolds", email: "goldengod@gmail.com", password_digest: "$2a$10$0IpM449VO9IPQlIANUIsnOomqWZ80upgaDprvhos.PiJhb48twcoS"},
+#   {name: "Charlie Kelly", email: "ratking@yahoo.com", password_digest: "$2a$10$WcCwF9QiL8KffgOvG/70ae2L86LsRMhHf3I66i6ZKld2uRmZqxmte"}
 # ])
