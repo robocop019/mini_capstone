@@ -1,6 +1,7 @@
 class Api::ProductsController < ApplicationController
+  before_action :authenticate_admin, only: [:create, :update, :destroy]
+
   def index
-    if current_user
       @products = Product.all
 
       search_term = params[:search]
@@ -25,9 +26,6 @@ class Api::ProductsController < ApplicationController
       end     
 
       render 'index.json.jbuilder'
-    else
-      render json: []
-    end
   end
 
   def create
