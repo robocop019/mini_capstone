@@ -10,21 +10,16 @@ class Product < ApplicationRecord
   # validates :description, length: {in: 50..200}
 
   belongs_to :supplier
-  # def supplier
-  #   # the purpose of this method is to return the Supplier Object associated with this Product
-
-  #   Supplier.find_by(id: supplier_id)
-  # end
-
   has_many :images
-  # def images
-  #   Image.where(product_id: id)
-  # end
-
   has_many :orders
+  has_many :product_categories
+  has_many :categories, through: :product_categories
+  
+  # def categories
+  #   product_categories.map { |product_category| product_category.category }
+  # end
 
   def is_discounted?
-    # price <= 100 ? true : false
     price <= 100
   end
 
