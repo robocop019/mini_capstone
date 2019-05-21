@@ -1,7 +1,12 @@
 json.id carted_product.id
-json.user_id carted_product.user_id
-json.product_id carted_product.product_id
-json.product carted_product.product
+
+json.user do
+  json.partial! carted_product.user, partial: 'api/users/user', as: :user
+end
+
+json.product do
+  json.partial! carted_product.product, partial: 'api/products/product', as: :product
+end
+
 json.quantity carted_product.quantity
 json.status carted_product.status
-json.order_id carted_product.order_id

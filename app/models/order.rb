@@ -5,24 +5,29 @@ class Order < ApplicationRecord
   has_many :products, through: :carted_products
 
   def calculate_subtotal
-    self.subtotal = 0
-    carted_products = CartedProduct.where(status: "carted", user_id: user.id)
-    carted_products.each do |carted_product|
-      self.subtotal += carted_product.quantity * Product.find(carted_product.product_id).price
-    end
+    # subtotal_sum = 0
+    # user.cart.each do |carted_product|
+    #   subtotal_sum += carted_product.subtotal
+    # end
+    
+    self.subtotal = user.cart.sum { |carted_product| carted_product.subtotal }
   end
 
   def calculate_tax
-      self.tax = subtotal * 0.08
+    self.tax = subtotal * 0.08
   end
 
   def calculate_total
-      self.total = subtotal + tax
+    self.total = subtotal + tax
   end
 
   def store_totals
     calculate_subtotal
     calculate_tax
     calculate_total
+  end
+
+  def update_cart
+    user.cart.update_all(order_id: self.id, status: "purchased")
   end
 end
