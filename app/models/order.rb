@@ -8,8 +8,7 @@ class Order < ApplicationRecord
     # subtotal_sum = 0
     # user.cart.each do |carted_product|
     #   subtotal_sum += carted_product.subtotal
-    # end
-    
+    # end    
     self.subtotal = user.cart.sum { |carted_product| carted_product.subtotal }
   end
 
